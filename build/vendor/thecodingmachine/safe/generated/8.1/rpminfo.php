@@ -1,0 +1,18 @@
+<?php
+
+namespace _PhpScoperdd275a4cd119\Safe;
+
+use _PhpScoperdd275a4cd119\Safe\Exceptions\RpminfoException;
+/**
+ * @param int $tag
+ * @throws RpminfoException
+ *
+ */
+function rpmaddtag(int $tag): void
+{
+    error_clear_last();
+    $safeResult = \rpmaddtag($tag);
+    if ($safeResult === \false) {
+        throw RpminfoException::createFromPhpError();
+    }
+}
