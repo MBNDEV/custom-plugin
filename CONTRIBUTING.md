@@ -27,19 +27,35 @@ Checklist of steps to verify the changes work correctly.
 - Keep it concise — reviewers should understand the PR in under 30 seconds.
 - Reference related issue numbers when available.
 
-## Versioning
+## Release
 
-Before tagging a release, update the `Version` header in `functions.php` to match the release tag (without the `v` prefix):
+Use this checklist for every plugin release (`vX.Y.Z`).
 
-```
+1. Update `Version` in `functions.php` (no `v` prefix):
+
+```php
  * Version: 1.2.0
 ```
 
-The tag name (`v1.2.0`) and the header value (`1.2.0`) must match — the Plugin Update Checker uses this header to detect available updates.
+2. Run quality checks:
 
-## Release Notes
+```bash
+composer run lint:run
+```
 
-When tagging a release (`vX.X.X`), group changes under:
+3. Commit and merge the release changes to the main branch.
+4. Create and push the annotated tag:
+
+```bash
+git tag -a v1.2.0 -m "Release v1.2.0"
+git push origin v1.2.0
+```
+
+5. Publish a GitHub release for the same tag with release notes.
+
+### Release Notes Format
+
+When publishing the release, group notes under:
 
 - **Features**
 - **Bug Fixes**
@@ -47,4 +63,4 @@ When tagging a release (`vX.X.X`), group changes under:
 - **Breaking Changes** (if any)
 - **Full Changelog**
 
-Base the notes on commit messages since the last tag. Keep entries concise and professional. No attribution to individual tools or services - notes represent the team.
+Tag (`v1.2.0`) and plugin header version (`1.2.0`) must match. The Plugin Update Checker reads `functions.php` to detect new versions.

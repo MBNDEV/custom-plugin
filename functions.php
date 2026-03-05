@@ -3,7 +3,7 @@
  * Plugin Name: Custom Plugin
  * Plugin URI: https://github.com/MBNDEV/custom-plugin
  * Description: Custom Plugin for MBN
- * Version: 1.0.0
+ * Version: 1.0.4
  * Author: My Biz Niche
  * Author URI: https://www.mybizniche.com/
  * License: GPL2
