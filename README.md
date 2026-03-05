@@ -16,4 +16,4 @@ This plugin uses Composer and loads `vendor/autoload.php` for:
 - **Auto-fix**: `composer run lint:fix` or `./vendor/bin/phpcbf`
 - **Fix twice then lint** (all-in-one): `composer run lint:run`
 
-To block merges to any branch when lint fails, enable branch protection and require the **Lint** status check; see [.github/BRANCH_PROTECTION.md](.github/BRANCH_PROTECTION.md).
+To block merges to any branch when lint fails, enable branch protection and require the **Lint** status check; see [.github/BRANCH_PROTECTION.md](.github/BRANCH_PROTECTION.md). 
