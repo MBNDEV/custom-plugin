@@ -16,6 +16,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-my-custom-post.php';
+My_Custom_Post::init();
+
+add_action(
+  'init',
+  function () {
+    echo 'hello world';
+  }
+);
+
 if ( ! class_exists( 'YahnisElsts\PluginUpdateChecker\v5\PucFactory' ) ) {
   require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 }
@@ -26,3 +36,10 @@ PucFactory::buildUpdateChecker(
   __FILE__,
   'custom-plugin'
 );
+
+/**
+ * Placeholder function.
+ */
+function my_invalid_method() {
+  echo 'Hello World';
+}
