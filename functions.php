@@ -24,6 +24,7 @@ add_action(
   function () {
     echo 'hello world';
     echo 'Welcome demo';
+    echo 'Git Training';
   }
 );
 
