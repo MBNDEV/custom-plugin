@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Modernize" namespace="_PhpScoperdd275a4cd119\PHPCSExtra\Modernize" xsi:noNamespaceSchemaLocation="https://schema.phpcodesniffer.com/phpcs.xsd">
-
-    <description>A collection of sniffs to detect code modernization opportunities.</description>
-</ruleset>
