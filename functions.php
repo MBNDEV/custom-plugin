@@ -23,6 +23,7 @@ add_action(
   'init',
   function () {
     echo 'hello world';
+    echo 'Welcome demo';
   }
 );
 
