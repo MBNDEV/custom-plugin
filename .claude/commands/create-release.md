@@ -8,6 +8,7 @@ If the requested version/release already exists:
 
 - Show the existing release/tag
 - Do not create a duplicate
+- Update the plugin version to match the release version
 
 If it does not exist:
 
