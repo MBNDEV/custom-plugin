@@ -12,15 +12,14 @@
  * @package CustomPlugin
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-if ( ! class_exists( 'YahnisElsts\PluginUpdateChecker\v5\PucFactory' ) ) {
-  require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
-}
-
 use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+if ( ! defined( 'ABSPATH' ) ) {
+  exit;
+}
+
+require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
+
 PucFactory::buildUpdateChecker(
   'https://github.com/MBNDEV/custom-plugin',
   __FILE__,
